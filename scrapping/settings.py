@@ -43,7 +43,7 @@ if not DEBUG and not ALLOWED_HOSTS:
     raise RuntimeError("DJANGO_ALLOWED_HOSTS must be set in production, e.g. 'example.com,.example.org'")
 
 # CSRF trusted origins (must include scheme): e.g. "https://example.com,https://sub.example.com"
-CSRF_TRUSTED_ORIGINS = ["https://workingthings-1.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://workingthings-2.onrender.com"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -244,4 +244,5 @@ SCRAPER_MAX_CAPTCHA_ATTEMPTS = env_int("SCRAPER_MAX_CAPTCHA_ATTEMPTS", 10)
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
