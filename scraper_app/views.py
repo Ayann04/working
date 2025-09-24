@@ -308,10 +308,7 @@ def trigger_scrape(request):
                 driver.quit()
             return JsonResponse({"message": "Scraping failed: Initial elements not found."}, status=500)
 
-        WebDriverWait(driver, DEFAULT_WAIT).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div.apex-item-option"))
-        )
-
+        time.sleep(20)
       
         try:
             driver.refresh()
